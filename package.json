@@ -1,0 +1,19 @@
+{
+  "name": "musicxchange",
+  "version": "1.0.0",
+  "description": "An application where musicians can rent instruments from local instrument owners.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rynoronha/musicXchange.git"
+  },
+  "author": "Ryan Noronha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rynoronha/musicXchange/issues"
+  },
+  "homepage": "https://github.com/rynoronha/musicXchange#readme"
+}
