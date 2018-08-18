@@ -28,6 +28,24 @@ module.exports = {
      });
   },
 
+  signInForm(req, res, next){
+     res.render("users/sign_in");
+  },
+
+  signIn(req, res, next){
+     passport.authenticate("local", (err, user, info) => {
+       if (err) { return next(err); }
+       if(!user){
+         req.flash("notice", "Sign in failed. Please try again.")
+         res.redirect("/users/sign_in");
+       } req.logIn(user, function(err) {
+          if (err) { return next(err); }
+           req.flash("notice", "You've successfully signed in!");
+           res.redirect("/");
+         });
+     })(req, res, next);
+  },
+
   signOut(req, res, next){
      req.logout();
      req.flash("notice", "You've successfully signed out!");

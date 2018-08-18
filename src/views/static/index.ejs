@@ -16,9 +16,11 @@
         <header class="jumbotron my-4">
           <h1 class="display-3 text-center">musicXchange</h1>
           <p class="lead text-center">Rent instruments from local musicians.</p>
-          <div class="text-center">
-            <a href="/users/sign_up" class="btn btn-success btn-lg">Sign up</a>
-          </div>
+          <% if(!currentUser) { %>
+            <div class="text-center">
+              <a href="/users/sign_up" class="btn btn-success btn-lg">Sign up</a>
+            </div>
+          <% } %>
         </header>
 
         <!-- Page Features -->
