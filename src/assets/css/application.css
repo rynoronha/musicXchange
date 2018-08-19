@@ -9,3 +9,19 @@ h2 {
 #signup {
   margin-top: 30px;
 }
+
+.city {
+  float: left;
+  width: 30%;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  padding: 20px;
+  margin-left: 10px;
+
+}
+
+.city-list {
+  display: block;
+  padding-left: 60px;
+  margin-top: 20px;
+}
