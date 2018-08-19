@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <main class="container">
+      <% include ../static/partials/navbar.ejs %>
+
+      <h2 class="display-4 text-center">Select Your City</h2>
+
+      <div class="city-list">
+
+        <% cities.forEach((city) => { %>
+
+          <div class="city text-center">
+            <a href="/cities/<%= city.id %>"> <%= city.name %> </a>
+          </div>
+        <% }) %>
+      </div>
+
+    </main>
+  </body>
+</html>
