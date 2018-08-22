@@ -1,6 +1,6 @@
 const request = require("request");
 const server = require("../../src/server");
-const base = "http://localhost:3000/cities/";
+const base = "http://localhost:3000/cities";
 const sequelize = require("../../src/db/models/index").sequelize;
 const City = require("../../src/db/models").City;
 
@@ -32,7 +32,7 @@ describe("routes : cities", () => {
        request.get(base, (err, res, body) => {
          expect(res.statusCode).toBe(200);
          expect(err).toBeNull();
-         expect(body).toContain("Cities");
+         expect(body).toContain("Select Your City");
          expect(body).toContain("London");
          done();
        });
