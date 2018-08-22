@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+      <h2 class="display-4 text-center"><%= city.name %></h2>
+       <h3 class="display-5 text-center">Listings</h3>
+       <div class="listing-list">
+
+         <% city.listings.forEach((listing) => { %>
+           <div class="listing text-center">
+             <a href="/cities/<%= city.id %>/listings/<%= listing.id %>"> <%= listing.instrument %> </a>
+             <p>$<%= listing.price %>/day</p>
+           </div>
+
+         <% }) %>
+       </div>
+
+    </main>
+
+    <% include ../static/partials/baseScripts.ejs %>
+
+  </body>
+</html>

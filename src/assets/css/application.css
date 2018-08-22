@@ -20,7 +20,31 @@ h2 {
 
 }
 
+.city:hover {
+  background-color: #d1d1d1;
+}
+
 .city-list {
+  display: block;
+  padding-left: 60px;
+  margin-top: 20px;
+}
+
+.listing {
+  float: left;
+  width: 30%;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  padding: 20px;
+  margin-left: 10px;
+
+}
+
+.listing:hover {
+  background-color: #d1d1d1;
+}
+
+.listing-list {
   display: block;
   padding-left: 60px;
   margin-top: 20px;
